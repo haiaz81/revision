@@ -3,6 +3,8 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
           name="C:/Users/Admin/Desktop/Formation SQL/Session 4/TECHNIQUES D'AUTOMATISATION DE TESTS II/Cours10 26-01-2024 GithubAction/HaithemDemoGithubAction/Revision">
-        <classes/>
+        <classes>
+            <class name="TestDemo"></class>
+        </classes>
     </test>
 </suite>
