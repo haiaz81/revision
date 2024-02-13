@@ -1,6 +1,7 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,15 +21,15 @@ public class TestDemo
     @BeforeClass
     public void setUp() {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+//        driver = new ChromeDriver();
+//        driver.manage().window().maximize();
 
 
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless");
-//        driver = new ChromeDriver(options);
-//        options.addArguments("--disable-gpu"); // Cette option est nécessaire sur certaines versions de Windows
-//        options.addArguments("--window-size=1920,1200"); // Définit la taille de la fenêtre, importante pour certaines applications
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
+        options.addArguments("--disable-gpu"); // Cette option est nécessaire sur certaines versions de Windows
+        options.addArguments("--window-size=1920,1200"); // Définit la taille de la fenêtre, importante pour certaines applications
 
 
         // Ouvrir une URL commune
